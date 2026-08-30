@@ -25,7 +25,7 @@ pico-workspace/
 ```bash
 git clone git@github.com:zyu-c/pico-workspace.git
 cd pico-workspace
-git clone https://github.com/raspberrypi/pico-sdk.git
+git clone --recursive https://github.com/raspberrypi/pico-sdk.git
 ```
 
 ## ビルド、書き込み (blink)
