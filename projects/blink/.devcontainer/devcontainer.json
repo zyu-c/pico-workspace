@@ -1,0 +1,24 @@
+{
+    "name": "Pico Development Environment",
+    "build": {
+        "dockerfile": "../../../docker/Dockerfile",
+        "context": "../../../docker"
+    },
+    "remoteUser": "ubuntu",
+    "mounts": [
+        "source=${localWorkspaceFolder}/../../pico-sdk,target=/opt/pico-sdk,type=bind,readonly"
+    ],
+    "containerEnv": {
+        "PICO_SDK_PATH": "/opt/pico-sdk"
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-vscode.cmake-tools",
+                "ms-vscode.cpptools"
+            ]
+        }
+    },
+    "workspaceFolder": "/workspace/${localWorkspaceFolderBasename}",
+    "workspaceMount": "source=${localWorkspaceFolder},target=/workspace/${localWorkspaceFolderBasename},type=bind"
+}
